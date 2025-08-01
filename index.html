@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Random Compliment Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f8ff;
+      text-align: center;
+      padding: 50px;
+      color: #333;
+    }
+    #compliment {
+      margin: 30px auto;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #2c3e50;
+      min-height: 60px;
+      max-width: 600px;
+    }
+    button {
+      background-color: #4caf50;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Random Compliment Generator</h1>
+  <div id="compliment">Click the button to get a compliment!</div>
+  <button onclick="generateCompliment()">Get Compliment</button>
+
+  <footer>
+    &copy; 2025 YourSiteName
+  </footer>
+
+  <script>
+    const compliments = [
+      "You're an awesome friend!",
+      "Your positivity is infectious.",
+      "You have a great sense of humor.",
+      "You're a smart cookie!",
+      "You light up the room.",
+      "You deserve a hug right now.",
+      "You have impeccable manners.",
+      "You're like a ray of sunshine.",
+      "You bring out the best in other people.",
+      "You are a great listener.",
+      "You're more helpful than you realize.",
+      "You have a brilliant mind.",
+      "You make the world a better place.",
+      "You are truly courageous.",
+      "Your creativity knows no bounds.",
+      "You have a heart of gold."
+    ];
+
+    function generateCompliment() {
+      const index = Math.floor(Math.random() * compliments.length);
+      document.getElementById('compliment').textContent = compliments[index];
+    }
+  </script>
+
+</body>
+</html>
