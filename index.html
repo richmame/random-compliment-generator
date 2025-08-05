@@ -4,76 +4,270 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Random Compliment Generator</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Get infinite random compliments to brighten your day. Interactive compliment generator with glowing button and smooth animations." />
+  <meta name="keywords" content="compliments, random compliment generator, positivity, motivation, kind words" />
+  <meta name="author" content="Richmame" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Random Compliment Generator" />
+  <meta property="og:description" content="Get infinite random compliments to brighten your day." />
+  <meta property="og:url" content="https://richmame.github.io/random-compliment-generator/" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Random Compliment Generator" />
+  <meta name="twitter:description" content="Get infinite random compliments to brighten your day." />
+
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+    
     body {
-      font-family: Arial, sans-serif;
-      background: #f0f8ff;
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      color: #fff;
       text-align: center;
-      padding: 50px;
-      color: #333;
+      padding: 50px 20px;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    /* SVG logo style */
+    header svg {
+      width: 60px;
+      height: 60px;
+      filter: drop-shadow(0 0 6px #00f0ff);
+    }
+
+    h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+      margin: 0;
+    }
+
     #compliment {
+      font-size: 2em;
+      font-weight: 700;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.12);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
       margin: 30px auto;
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #2c3e50;
-      min-height: 60px;
-      max-width: 600px;
+      max-width: 700px;
+      transition: transform 0.3s ease;
+      min-height: 80px;
     }
+
+    #compliment:hover {
+      transform: scale(1.03) rotateZ(0.5deg);
+    }
+
     button {
-      background-color: #4caf50;
+      background: #00f0ff;
+      color: #000;
+      padding: 20px 50px;
+      font-size: 1.5em;
+      font-weight: 700;
       border: none;
-      color: white;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      border-radius: 8px;
+      border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      box-shadow: 0 0 25px #00f0ff;
+      transition: all 0.4s ease;
+      margin-bottom: 50px;
     }
+
     button:hover {
-      background-color: #45a049;
+      background: #00d8ff;
+      box-shadow: 0 0 40px #00d8ff;
+      transform: scale(1.05);
     }
+
+    section {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 50px auto;
+      max-width: 700px;
+      text-align: left;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: #ffffff;
+      margin-top: 0;
+    }
+
     footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 0.9em;
-      color: #999;
+      color: #eee;
     }
   </style>
 </head>
 <body>
 
-  <h1>Random Compliment Generator</h1>
+  <header>
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="32 4 39 24 60 24 42 38 49 58 32 45 15 58 22 38 4 24 25 24" fill="#00f0ff" stroke="#00b8cc" stroke-width="2"/>
+      <polygon points="32 10 37 26 53 26 40 36 45 52 32 41 19 52 24 36 11 26 27 26" fill="#00d8ff" stroke="#0099aa" stroke-width="1"/>
+    </svg>
+    <h1>🌟 Random Compliment Generator 🌟</h1>
+  </header>
+
   <div id="compliment">Click the button to get a compliment!</div>
   <button onclick="generateCompliment()">Get Compliment</button>
 
+  <section id="about">
+    <h2>About</h2>
+    <p>This beautiful site brings joy through infinite compliments. Click the glowing button and feel brighter instantly. Built with love to make your day.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: richmame634@gmail.com</p>
+  </section>
+
+  <section id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>No personal data is collected. No cookies. No tracking. 100 percent private and anonymous.</p>
+  </section>
+
+  <section id="terms">
+    <h2>Terms of Use</h2>
+    <p>Use this site at your own risk. The compliments are generated automatically and for entertainment purposes only. We do not guarantee any specific outcome from using the site.</p>
+  </section>
+
+  <section id="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>This site does not provide professional advice. Compliments are intended to uplift and inspire but not replace professional help or counseling.</p>
+  </section>
+
   <footer>
-    &copy; 2025 YourSiteName
+    &copy; 2025 Random Compliment Generator
   </footer>
 
   <script>
     const compliments = [
-      "You're an awesome friend!",
-      "Your positivity is infectious.",
-      "You have a great sense of humor.",
-      "You're a smart cookie!",
-      "You light up the room.",
-      "You deserve a hug right now.",
-      "You have impeccable manners.",
-      "You're like a ray of sunshine.",
-      "You bring out the best in other people.",
-      "You are a great listener.",
-      "You're more helpful than you realize.",
-      "You have a brilliant mind.",
-      "You make the world a better place.",
-      "You are truly courageous.",
-      "Your creativity knows no bounds.",
-      "You have a heart of gold."
+      "You're amazing",
+      "You shine so bright",
+      "You're a masterpiece",
+      "You're pure magic",
+      "You make everything better",
+      "You're a hero in disguise",
+      "You’re stronger than you know",
+      "You light up my screen",
+      "You're the reason someone smiles",
+      "You’re brilliance in motion",
+      "You glow with kindness",
+      "You have a brilliant soul",
+      "You radiate excellence",
+      "You turn ordinary into art",
+      "You're unforgettable",
+      "You're deeply loved",
+      "You're a walking inspiration",
+      "You're limitless",
+      "You're a miracle in motion",
+      "You're peace in a storm",
+      "You're the spark of hope",
+      "You inspire greatness",
+      "You are truly special",
+      "Your smile is contagious",
+      "You have a heart of gold",
+      "You brighten every room",
+      "You make people better",
+      "You're a true friend",
+      "Your kindness is rare",
+      "You have an amazing mind",
+      "You're a shining star",
+      "You bring joy wherever you go",
+      "You have endless potential",
+      "You are so talented",
+      "You light up the darkest days",
+      "You are unstoppable",
+      "You are full of grace",
+      "You make the world beautiful",
+      "Your spirit is inspiring",
+      "You are a blessing",
+      "You have a beautiful soul",
+      "You are radiant",
+      "You spread happiness",
+      "You are kind beyond measure",
+      "You are extraordinary",
+      "Your positivity is powerful",
+      "You are loved more than you know",
+      "You make dreams come true",
+      "You are a gift to others",
+      "You shine from within",
+      "You make life better",
+      "You are truly wonderful",
+      "You light up the sky",
+      "You have a special magic",
+      "You inspire everyone",
+      "You are a bright light",
+      "You bring hope",
+      "You make the impossible possible",
+      "You are a source of joy",
+      "You are magnificent",
+      "You have a heart full of love",
+      "You make people smile",
+      "You are amazing just as you are",
+      "You bring peace",
+      "You have a beautiful heart",
+      "You are deeply appreciated",
+      "You are strength",
+      "You are courageous",
+      "You have a brilliant mind",
+      "You bring out the best in others",
+      "You are genuine",
+      "You have endless charm",
+      "You are unique",
+      "You make the world brighter",
+      "You are thoughtful",
+      "You are caring",
+      "You have a wonderful sense of humor",
+      "You make life joyful",
+      "You inspire kindness",
+      "You have great energy",
+      "You are amazing beyond words",
+      "You are a star",
+      "You are magical",
+      "You have a warm heart",
+      "You are creative",
+      "You make people happy",
+      "You are inspiring",
+      "You are wonderful",
+      "You bring light",
+      "You are a treasure",
+      "You are loved",
+      "You are brilliant",
+      "You have a shining spirit",
+      "You are fantastic",
+      "You make a difference",
+      "You are a blessing to many",
+      "You are spectacular"
     ];
 
     function generateCompliment() {
       const index = Math.floor(Math.random() * compliments.length);
-      document.getElementById('compliment').textContent = compliments[index];
+      const complimentBox = document.getElementById('compliment');
+      complimentBox.textContent = compliments[index];
     }
+
+    // Auto-generate every 5 seconds
+    setInterval(generateCompliment, 5000);
   </script>
 
 </body>
